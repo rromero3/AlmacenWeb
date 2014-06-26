@@ -1,8 +1,7 @@
 <?php
 
-class UsuariosController extends AppController {
+class ObrasController extends AppController {
 public $scaffold;
     public $helpers = array('Html', 'Form');
-
 }
 ?>

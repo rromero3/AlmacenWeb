@@ -1,22 +1,19 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Usuario Model
+ * Marca Model
  *
- * @property Obra $Obra
+ * @property Materiale $Materiale
  */
-class Usuario extends AppModel {
+class Marca extends AppModel {
 
 /**
  * Display field
  *
  * @var string
  */
-	public $displayField = 'nombreCompleto';
+	public $displayField = 'nombre';
 
-public $virtualFields = array(
-    'nombreCompleto' => "CONCAT(nombres, ' ', apellidos)"
-);
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
@@ -26,9 +23,9 @@ public $virtualFields = array(
  * @var array
  */
 	public $hasMany = array(
-		'Obra' => array(
-			'className' => 'Obra',
-			'foreignKey' => 'usuario_id',
+		'Materiale' => array(
+			'className' => 'Materiale',
+			'foreignKey' => 'marca_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',
